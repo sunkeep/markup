@@ -1,0 +1,273 @@
+@import "reset.css";
+@import "fonts.css";
+html, body{
+    background: #000;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    font-family: 'proxima_nova_ththin', 'Gill Sans', Corbel, Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.padding__r-40{
+    padding-right: 40px;
+}
+.padding__l-40{
+    padding-left: 40px;
+}
+.clearfix:after {
+    clear: both;
+}
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding:40px 40px 40px 140px;
+}
+
+.side-menu{
+    position: absolute;
+    left: 0 ;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    background: #161616;
+}
+    .side-menu li{
+        display: block;
+        width: 100px;
+        height: 100px;
+        border-bottom: 1px solid #292929;
+    }
+/* battery summary header */
+.summary-head{
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+    .summary-head p{
+        margin-bottom: 8px;
+    }
+
+/*battery list*/
+.battery-list-wrapper{
+    margin: 25px 0 50px 0;
+    position: relative;
+}
+    .battery-item{
+        background: #161616;
+        overflow: hidden;
+        float: left;
+        margin-right: 25px;
+        position: relative;
+        width: 270px;
+        height: 270px;
+        padding: 13px 12px 12px 38px;
+    }
+        .status{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 100%;
+            border-right: 2px solid #000;
+            background: #161616;
+        }
+            .status span{
+                transform: rotate(-90deg);
+                transform-origin: left top 0;
+                line-height: 24px;
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+            }
+        .online .status{
+            color: #81b321;
+        }
+        .offline .status{
+            color: #99040c;
+        }
+        .battery-item dt,
+        .battery-item dd{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .battery-item dt{
+            margin-bottom: 6px;
+        }
+        .battery-item dd{
+            margin-bottom: 12px;
+        }
+        .battery-item .h4{
+            font-size: 22px;
+        }
+        .efficiency{
+            position: absolute;
+            bottom: 0;
+            left: 38px;
+            right: 12px;
+        }
+
+            .efficiency  .h3{
+                font-size: 50px;
+            }
+    /*add battery*/
+    .add-battery-item{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top:0;
+        width: 90px;
+        padding: 15px;
+        border: 1px solid #161616;
+        cursor: pointer;
+    }
+        .add-battery-item::after{
+            content: '+';
+            display: block;
+            position: absolute;
+            font-size: 60px;
+            line-height: 60px;
+            top: calc(50% - 30px);
+            left: calc(50% - 14px);
+        }
+
+/*battery chart row*/
+.mining-chart{
+    position: relative;
+    height: 90px;
+    width: 100%;
+}
+    .chart-row{
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+        .chart-row li{
+            float: left;
+            min-width: 100px;
+            color: #999;
+            position: relative;
+        }
+        .chart-row::before{
+            content: '';
+            display: block;
+            height: 4px;
+            background: #1c1c1c;
+            position: absolute;
+            right: 0;
+            left: 0;
+        }
+    .chart-row .line{
+        height: 4px;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+.chart-row__top{
+    top: 0;
+}
+    .chart-row__top li{
+        padding-bottom: 10px;
+    }
+    .chart-row__top li:last-child{
+        float: right;
+    }
+    .chart-row__top::before{
+        bottom: 0;
+    }
+    .chart-row__top .line{
+        bottom: 0;
+    }
+
+.chart-row__bottom{
+    bottom: 0;
+}
+    .chart-row__bottom{
+        padding-top: 10px;
+    }
+    .chart-row__bottom::before{
+        top: 0;
+    }
+    .chart-row__bottom .line{
+        top: -10px;
+    }
+
+.enrg-units{
+    width: 100%;
+    position: absolute;
+    top: 27px;
+    bottom: 27px;
+}
+    .enrg-units li{
+        float: left;
+        margin-right: 4px;
+        height: 100%;
+        width: 6px;
+        position: relative;
+    }
+        .enrg-units li span{
+            position: absolute;
+            bottom: 0;
+            left:0;
+            right: 0;
+        }
+.profit-bg{
+    background: #81b321;
+}
+.warning-bg{
+    background: #b36a18;
+}
+.danger-bg{
+    background: #99040c;
+}
+/*summary info*/
+.summary-info{
+    margin: 50px 0 25px 0;
+    overflow: hidden;
+    font-size: 14px;
+}
+    .summary-info li{
+        float: left;
+        min-width: 250px;
+        padding-right: 20px;
+    }
+    .summary-info li:last-child{
+        float: right;
+        padding-right: 0;
+        text-align: right;
+    }
+        .summary-info p{
+            margin-bottom: 8px;
+        }
+/*total*/
+.total-info{
+    overflow: hidden;
+    margin: 25px 0;
+    font-size: 20px;
+}
+    .total-info li:first-child{
+        float: left;
+    }
+    .total-info li:last-child{
+        float: right;
+        text-align: right;
+    }
