@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bat</title>
+    <title>Sunkeep</title>
     <link rel="stylesheet" href="css/theme.css">
 </head>
 <body>
@@ -15,60 +15,212 @@
     </ul>
     <div class="mainContentWrap">
         <!--summary battery list header //-->
-        <ul class="summary-head clearfix">
-            <li class="pull-left padding__r-40">
-                <p class="grey-color">Day time Left</p>
-                <div class="h4"> 0:12:12 DTL
+        <ul class="summary-head">
+            <li>
+                <div>
+                    <p class="grey-color">Day time Left</p>
+                    <div class="h4">
+                        0:12:12 DTL
+                    </div>
                 </div>
             </li>
-            <li class="pull-left padding__r-40">
-                <p class="grey-color">Earth time</p>
-                <div class="h4">
-                    18:12:34 ETC
+            <li>
+                <div>
+                    <p class="grey-color">Earth time</p>
+                    <div class="h4">
+                        18:12:34 ETC
+                    </div>
                 </div>
             </li>
-            <li class="pull-right text-right padding__l-40">
-                <p class="grey-color">Rad/AC</p>
-                <div class="h4"> 49.02
+            <li>
+                <div>
+                    <p class="grey-color">Temperature</p>
+                    <div class="h4">
+                        123.12 &#176;C
+                    </div>
                 </div>
             </li>
-            <li class="pull-right text-right padding__l-40">
-                <p class="grey-color">Heat</p>
-                <div class="h4">
-                    123.12 &#176;C
+            <li>
+                <div>
+                    <p class="grey-color">Pressure</p>
+                    <div class="h4">
+                        49.092 B
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="grey-color">Humidity</p>
+                    <div class="h4">
+                        67.09
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="grey-color">Solar radiation</p>
+                    <div class="h4">
+                        361.62 R/H
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="grey-color">Sunrise at</p>
+                    <div class="h4"> 12:02:34</div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="grey-color">Sunset at</p>
+                    <div class="h4"> 00:54:58
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="grey-color">Sunset in</p>
+                    <div class="h4"> 00:54:58
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="grey-color">Cloudiness</p>
+                    <div class="h4">
+                        40.0%
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="grey-color">Wind Speed</p>
+                    <div class="h4">
+                        3.4 mph
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <p class="grey-color">Wind Direction</p>
+                    <div class="h4">
+                        NNE 123.4 &#176;
+                    </div>
                 </div>
             </li>
         </ul>
         <!-- // summary battery list header-->
+        <!--battery & powerbanks //-->
+        <div class="b-p-wrapper">
+            <div class="b-p">
+                <div>
+                    <div class="grey-color">Batteries</div>
+                    <div class="clearfix">
+                        <div class="battery-indicator">
+                            <div style="height: 100%"></div>
+                        </div>
+                        <div class="battery-indicator">
+                            <div style="height: 100%"></div>
+                        </div>
+                        <div class="battery-indicator">
+                            <div style="height: 100%"></div>
+                        </div>
+                        <div class="battery-indicator">
+                            <div style="height: 100%"></div>
+                        </div>
+                        <div class="battery-indicator">
+                            <div style="height: 100%"></div>
+                        </div>
+                        <div class="battery-indicator">
+                            <div style="height: 100%"></div>
+                        </div>
+
+                        <div class="battery-indicator">
+                            <div style="height: 80%"></div>
+                        </div>
+                        <div class="battery-indicator">
+                            <div style="height: 50%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-p">
+                <div>
+                    <div class="grey-color">Charged in</div>
+                    <div class="h3">22:12:22</div>
+                </div>
+            </div>
+            <div class="b-p">
+                <div>
+                    <div class="grey-color">Solar panels</div>
+                    <div class="panel-wrapper">
+                        <div class="panel full"></div>
+                        <div class="panel full"></div>
+                        <div class="panel full"></div>
+                        <div class="panel full"></div>
+                        <div class="panel full"></div>
+                        <!---->
+                        <div class="panel full"></div>
+                        <div class="panel full"></div>
+                        <div class="panel full"></div>
+                        <div class="panel full"></div>
+                        <div class="panel full"></div>
+                    </div>
+                    <div class="panel-wrapper">
+                        <div class="panel full"></div>
+                        <div class="panel full"></div>
+                        <div class="panel full"></div>
+                        <div class="panel danger"></div>
+                        <div class="panel full"></div>
+                        <!---->
+                        <div class="panel danger"></div>
+                        <div class="panel"></div>
+                        <div class="panel "></div>
+                        <div class="panel full"></div>
+                        <div class="panel full"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="b-p">
+                <div>
+                    <div class="grey-color">Efficiency</div>
+                    <div class="h3">87.2%</div>
+                </div>
+            </div>
+
+        </div>
+        <!-- //battery & powerbanks -->
+
         <!--horizontal chart //-->
         <div class="mining-chart">
             <!--top lines //-->
-            <ul class="chart-row chart-row__top  grey-color">
+            <ul class="chart-row chart-row__top">
                 <li style="width: 40%">
-                    Used
+                    <span class="grey-color">Used</span>
                     <span class="line profit-bg"></span>
                 </li>
                 <li style="width: 30%">
-                    To Go
+                    <span class="grey-color">To Go</span>
                     <span class="line"></span>
                 </li>
                 <li style="width: 20%">
-                    N/A
+                    <span class="grey-color">N/A</span>
                     <span class="line danger-bg"></span>
                 </li>
             </ul>
             <!--bottom lines //-->
-            <ul class="chart-row chart-row__bottom ">
+            <ul class="chart-row chart-row__bottom grey-color">
                 <li style="width: 40%">
-                    Used
+                    <span class="grey-color">Used</span>
                     <span class="line danger-bg"></span>
                 </li>
-                <li style="width:20%;">
-                    Backup'd
+                <li style="width:20%">
+                    <span class="grey-color">Backup'd</span>
                     <span class="line warning-bg"></span>
                 </li>
                 <li style="width: 24%">
-                    Unalocated
+                    <span class="grey-color">Unalocated</span>
                     <span class="line profit-bg"></span>
                 </li>
             </ul>
