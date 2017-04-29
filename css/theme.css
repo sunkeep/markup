@@ -42,7 +42,7 @@ html, body{
 }
 
 .side-menu{
-    position: absolute;
+    position: fixed;
     left: 0 ;
     top: 0;
     bottom: 0;
@@ -54,6 +54,17 @@ html, body{
         width: 100px;
         height: 100px;
         border-bottom: 1px solid #292929;
+        position: relative;
+    }
+    .side-menu li.active{
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: #81b321;
     }
 /* battery summary header */
 .summary-head{
@@ -68,17 +79,20 @@ html, body{
 /*battery list*/
 .battery-list-wrapper{
     margin: 25px 0 50px 0;
+    padding-bottom: 200px;
     position: relative;
 }
+
     .battery-item{
         background: #161616;
         overflow: hidden;
         float: left;
-        margin-right: 25px;
+        margin: 0 25px 25px 0 ;
         position: relative;
         width: 270px;
         height: 270px;
         padding: 13px 12px 12px 38px;
+        cursor: pointer;
     }
         .status{
             position: absolute;
@@ -149,6 +163,17 @@ html, body{
             top: calc(50% - 30px);
             left: calc(50% - 14px);
         }
+
+.battery-list-wrapper + .total-info{
+    position: fixed;
+    bottom: 0;
+    left:100px;
+    right: 0;
+    margin: 0;
+    z-index: 1;
+    padding: 140px 40px 0 40px;
+    background:-webkit-linear-gradient(top, rgba(0,0,0,0) 12%,rgba(0,0,0, 1) 70%);
+}
 
 /*battery chart row*/
 .mining-chart{
