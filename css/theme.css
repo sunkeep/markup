@@ -347,6 +347,9 @@ html, body{
 .danger-bg{
     background: #99040c;
 }
+.muted-bg{
+    background: #808080;
+}
 /*summary info*/
 .summary-info{
     margin: 50px 0 25px 0;
@@ -378,4 +381,104 @@ html, body{
     .total-info li:last-child{
         float: right;
         text-align: right;
+    }
+
+/*Shelduer*/
+.sh-wrapper{
+    width: calc(100% + 80px);
+    position: relative;
+    height: 600px;
+    margin: -41px -40px 0 -40px;
+    background-size: 100% 600px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to bottom,
+        #0d0d0d 25%,
+        #1a1a1a 25%,
+        #1a1a1a 50%,
+        #262626 50%,
+        #262626 75%,
+        #333333 75%
+    );
+}
+    .sh-grid{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: 100px 150px;
+        background-image:
+            linear-gradient(to right, rgba(255,255,255,0.2) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255,255,255,0.2) 1px, transparent 1px);
+    }
+    .tasks-rows{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+        .tasks-rows li{
+            height: 150px;
+            padding: 15px;
+            position: relative;
+            background-size: 6px 4px;
+            background-repeat: repeat-x;
+            background-position: bottom;
+            background-image: linear-gradient(to right, rgba(255,255,255,0.2) 0px, transparent 2px);
+        }
+            .tasks-rows .h3,
+            .current-cover .h3{
+                font-size: 26px;
+            }
+            .task{
+                position: absolute;
+                bottom: 0;
+                height: 46px;
+                padding: 8px;
+                color: #fff;
+                line-height: 1.2em;
+                font-size: 14px;
+            }
+    .current-cover{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        padding: 15px;
+        background: rgba(0,0,0,0.5);
+        border-left: 2px solid rgba(255,255,255,0.6);
+    }
+        .current-cover p{
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+.sh-alert{
+    padding: 15px;
+    margin: 0 -40px;
+}
+.danger-zone{
+    position: absolute;
+    top: 0;
+    bottom: -100px;
+    width: 120px;
+    z-index: 2;
+    background: rgba(255, 0, 0, 0.2);
+    border: solid rgba(255, 0, 0, 0.5);
+    border-width: 0 1px 1px;
+    border-radius: 0 4px 4px 0;
+}
+    .danger-zone::after{
+        content: 'DANGER';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left:0;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        line-height: 1.8em;
     }
