@@ -49,14 +49,28 @@ html, body{
     width: 100px;
     background: #161616;
 }
-    .side-menu li{
+    .side-menu a{
         display: block;
         width: 100px;
         height: 100px;
         border-bottom: 1px solid #292929;
         position: relative;
+        text-decoration: none;
+        color: #fff;
     }
-    .side-menu li.active{
+    .side-menu a:hover,
+    .side-menu a:active,
+    .side-menu a:focus{
+        outline: none;
+        text-decoration: none;
+    }
+    .side-menu a svg{
+        display: block;
+        width: 61px;
+        height: 100px;
+        margin: 0 auto;
+    }
+    .side-menu .active::after{
         content: '';
         display: block;
         position: absolute;
@@ -65,6 +79,9 @@ html, body{
         bottom: 0;
         width: 4px;
         background: #81b321;
+    }
+    .side-menu .active svg{
+        opacity: 0.3;
     }
     .side-menu::after{
         content: 'SUNKEEP';
